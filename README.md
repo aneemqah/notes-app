@@ -2,4 +2,5 @@
 
 A note app built with react that allows you to create, search and store notes using local storage.
 
-![Screenshot 2022-04-05 at 15 06 35](https://user-images.githubusercontent.com/95934430/161772377-957532c7-ae70-40cc-8eab-91ba48a6a38b.png)
+
+<img width="200" alt="Screenshot 2022-04-05 at 15 18 50" src="https://user-images.githubusercontent.com/95934430/161775054-5a623b19-5fb4-4fa6-b250-e9cbe948b812.png">
