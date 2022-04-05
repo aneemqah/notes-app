@@ -1,11 +1,14 @@
 import Note from './Note';
 
-const List = () => {
+const NotesList = () => {
   return (
     <div className="notes-list">
+      <Note />
+      <Note />
+      <Note />
       <Note />
     </div>
   );
 };
 
-export default List;
+export default NotesList;
