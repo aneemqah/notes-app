@@ -4,6 +4,7 @@
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
+  min-height: 100vh;
 }
 
 .note {
@@ -17,17 +18,13 @@
   white-space: pre-wrap;
 }
 
-.note-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .notes-list {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
+
+/* NOTE STYLES */
 
 .note.new {
   background-color: aquamarine;
@@ -43,6 +40,12 @@ textarea:focus {
   outline: none;
 }
 
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .save {
   background-color: lightgray;
   border: none;
@@ -53,8 +56,54 @@ textarea:focus {
 .save:hover {
   background-color: #fff;
   cursor: pointer;
+  padding: 5px;
+  margin-bottom: 1.5em;
 }
 
 .delete-icon {
   cursor: pointer;
+}
+
+/* SEARCH STYLES  */
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1.5em;
+}
+
+.search input {
+  border: none;
+  background-color: lightgray;
+}
+
+.search input:focus {
+  outline: none;
+}
+
+/* TOGGLE STYLES */
+
+.toggle-btn {
+  background-color: coral;
+  color: black;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dark-mode {
+  background-color: black;
+}
+
+.dark-mode h1 {
+  color: white;
 }
