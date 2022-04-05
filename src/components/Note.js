@@ -10,6 +10,7 @@ const Note = ({ id, text, date, handleDeleteNote }) => {
           onClick={() => handleDeleteNote(id)}
           className="delete-icon"
           size="1.3em"
+          data-testid="note-id"
         />
       </div>
     </div>
