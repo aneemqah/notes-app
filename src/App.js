@@ -8,7 +8,7 @@ import Note from './components/Note';
 const App = () => {
   const [searchText, setSearchText] = useState('');
   const [darkmode, setDarkMode] = useState(false);
-  const [isEdit, setIsEdit] = useState(false);
+
   const [notes, setNotes] = useState([
     {
       id: nanoid(),
@@ -55,10 +55,16 @@ const App = () => {
     setNotes(newNotes);
   };
 
-  const editNote = (id) => {
-    const newNotes = notes.filter((note) => note.id === id);
-    setNotes(newNotes);
+  const editNote = (id, text) => {
+    // Create a copy of the notes array
+    const newNotes = [...notes];
+    // Is the id being passed the same as the id in the notes
+    const findNote = newNotes.find((id) => newNotes.id === id);
+    setNotes(findNote);
   };
+
+  // find (actual note)id and update text of the
+  // set notes with the updated array
 
   return (
     <div className={`${darkmode && 'dark-mode'}`}>
