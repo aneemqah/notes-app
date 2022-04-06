@@ -3,8 +3,12 @@ import { nanoid } from 'nanoid';
 import NotesList from './components/NotesList';
 import Search from './components/Search';
 import Header from './components/Header';
+import Note from './components/Note';
 
 const App = () => {
+  const [searchText, setSearchText] = useState('');
+  const [darkmode, setDarkMode] = useState(false);
+  const [isEdit, setIsEdit] = useState(false);
   const [notes, setNotes] = useState([
     {
       id: nanoid(),
@@ -22,9 +26,6 @@ const App = () => {
       date: '01/03/2022',
     },
   ]);
-
-  const [searchText, setSearchText] = useState('');
-  const [darkmode, setDarkMode] = useState(false);
 
   useEffect(() => {
     localStorage.setItem('react-notes-app-data', JSON.stringify(notes));
@@ -54,10 +55,15 @@ const App = () => {
     setNotes(newNotes);
   };
 
+  const editNote = (id) => {
+    const newNotes = notes.filter((note) => note.id === id);
+    setNotes(newNotes);
+  };
+
   return (
     <div className={`${darkmode && 'dark-mode'}`}>
       <div className="container">
-        <Header handelToggleMode={setDarkMode} />
+        <Header handleToggleMode={setDarkMode} />
         <Search handleSearchNote={setSearchText} />
         <NotesList
           handleAddNote={addNote}
@@ -65,6 +71,7 @@ const App = () => {
           notes={notes.filter((note) =>
             note.text.toLowerCase().includes(searchText)
           )}
+          handleEditNote={editNote}
         />
       </div>
     </div>

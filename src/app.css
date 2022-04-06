@@ -46,6 +46,11 @@ textarea:focus {
   justify-content: space-between;
 }
 
+.icons {
+  display: flex;
+  align-items: center;
+}
+
 .save {
   background-color: lightgray;
   border: none;
@@ -64,6 +69,9 @@ textarea:focus {
   cursor: pointer;
 }
 
+.edit-icon {
+  cursor: pointer;
+}
 /* SEARCH STYLES  */
 
 .search {
