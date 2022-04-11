@@ -56,15 +56,15 @@ const App = () => {
   };
 
   const editNote = (id, text) => {
-    // Create a copy of the notes array
+    // Create a copy of the current state i.e notes
     const newNotes = [...notes];
-    // Is the id being passed the same as the id in the notes
-    const findNote = newNotes.find((id) => newNotes.id === id);
-    setNotes(findNote);
+    // Is the id being passed the same as the id in the notes array
+    let index = newNotes.find((n) => n.id === id);
+    // Update the note text
+    newNotes[index].text = text;
+    // Update state with new text
+    setNotes(newNotes);
   };
-
-  // find (actual note)id and update text of the
-  // set notes with the updated array
 
   return (
     <div className={`${darkmode && 'dark-mode'}`}>
@@ -77,7 +77,6 @@ const App = () => {
           notes={notes.filter((note) =>
             note.text.toLowerCase().includes(searchText)
           )}
-          handleEditNote={editNote}
         />
       </div>
     </div>

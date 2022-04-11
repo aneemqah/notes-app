@@ -65,13 +65,13 @@ textarea:focus {
   margin-bottom: 1.5em;
 }
 
-.delete-icon {
+.delete-icon,
+.edit-icon,
+.save-icon {
   cursor: pointer;
+  padding: 5px;
 }
 
-.edit-icon {
-  cursor: pointer;
-}
 /* SEARCH STYLES  */
 
 .search {
