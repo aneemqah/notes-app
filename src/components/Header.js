@@ -1,10 +1,12 @@
-const Header = ({ handelToggleMode }) => {
+const Header = ({ handelToggleDarkMode }) => {
   return (
     <div className="header">
       <h1>Notes</h1>
       <button
         className="toggle-btn"
-        onClick={() => handelToggleMode((previousMode) => !previousMode)}
+        onClick={() =>
+          handelToggleDarkMode((previousDarkMode) => !previousDarkMode)
+        }
       >
         Toggle Mode
       </button>

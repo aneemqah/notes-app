@@ -30,6 +30,10 @@
   background-color: aquamarine;
 }
 
+.new-text {
+  width: 100%;
+}
+
 textarea {
   border: none;
   resize: none;
@@ -95,7 +99,7 @@ textarea:focus {
 /* TOGGLE STYLES */
 
 .toggle-btn {
-  background-color: coral;
+  background-color: lightgray;
   color: black;
   border: none;
   border-radius: 15px;
