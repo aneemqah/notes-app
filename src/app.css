@@ -30,6 +30,14 @@
   background-color: aquamarine;
 }
 
+.new-text {
+  width: 100%;
+  background-color: beige;
+  border-radius: 6px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
 textarea {
   border: none;
   resize: none;
@@ -46,6 +54,11 @@ textarea:focus {
   justify-content: space-between;
 }
 
+.icons {
+  display: flex;
+  align-items: center;
+}
+
 .save {
   background-color: lightgray;
   border: none;
@@ -60,8 +73,11 @@ textarea:focus {
   margin-bottom: 1.5em;
 }
 
-.delete-icon {
+.delete-icon,
+.edit-icon,
+.save-icon {
   cursor: pointer;
+  padding: 5px;
 }
 
 /* SEARCH STYLES  */
@@ -87,7 +103,7 @@ textarea:focus {
 /* TOGGLE STYLES */
 
 .toggle-btn {
-  background-color: coral;
+  background-color: lightgray;
   color: black;
   border: none;
   border-radius: 15px;
