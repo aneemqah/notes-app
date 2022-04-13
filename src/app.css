@@ -32,6 +32,10 @@
 
 .new-text {
   width: 100%;
+  background-color: beige;
+  border-radius: 6px;
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
 textarea {
