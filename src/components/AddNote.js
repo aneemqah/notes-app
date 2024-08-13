@@ -1,7 +1,7 @@
-import { useState } from 'react';
-
+import { useState } from "react";
+// testing
 const AddNote = ({ handleAddNote }) => {
-  const [noteText, setNoteText] = useState('');
+  const [noteText, setNoteText] = useState("");
   const characterLimit = 200;
 
   const handleChange = (event) => {
@@ -13,7 +13,7 @@ const AddNote = ({ handleAddNote }) => {
   const handleSave = (event) => {
     if (noteText.trim().length > 0) {
       handleAddNote(noteText);
-      setNoteText('');
+      setNoteText("");
     }
   };
 
